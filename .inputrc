@@ -1,0 +1,28 @@
+# Ignore case during completion
+set completion-ignore-case on
+
+# Show all completions if ambiguous
+set show-all-if-ambiguous on
+
+# Mark symlinked directories during completion
+set mark-symlinked-directories on
+
+# Disable paging for completions
+set page-completions off
+
+# Show file type indicators in completion
+set visible-stats on
+
+# Skip text that is already completed
+set skip-completed-text on
+
+set input-meta on
+set output-meta on
+set convert-meta off
+
+# Flip through autocompletion matches with Shift-Tab.
+"\e[Z": menu-complete
+
+# Filtered history search
+"\e[A": history-search-backward
+"\e[B": history-search-forward
