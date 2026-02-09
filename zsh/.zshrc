@@ -115,3 +115,8 @@ ZSH_HIGHLIGHT_STYLES[path]='fg=white,bold'
 #     zellij attach -c
 #   fi
 # fi
+
+if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+  cd /mnt/c/Users/Dylan/Desktop
+  source ~/.venv/bin/activate
+fi
