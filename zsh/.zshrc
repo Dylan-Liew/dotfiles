@@ -120,3 +120,7 @@ if [[ "$TERM_PROGRAM" != "vscode" ]]; then
   cd /mnt/c/Users/Dylan/Desktop
   source ~/.venv/bin/activate
 fi
+
+export PATH="$HOME/.gem/ruby/3.3.0/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
