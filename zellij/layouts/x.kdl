@@ -1,27 +1,18 @@
 layout {
-    cwd "/home/x44ylan"
+    cwd "/mnt/c/Users/Dylan/Desktop"
     tab name="x" focus=true hide_floating_panes=true {
         pane size=1 borderless=true {
             plugin location="zellij:tab-bar"
         }
-        pane command="zellij" cwd=".config/zellij/layouts" focus=true size="70%" {
-            args "action" "dump-layout"
-            start_suspended true
-        }
-        pane size="30%" split_direction="vertical" {
-            pane cwd="Desktop" size="50%"
-            pane cwd="Desktop" size="50%"
+        pane split_direction="vertical" {
+            pane command="zellij" focus=true size="60%" {
+                args "action" "dump-layout"
+                start_suspended true
+            }
+            pane size="40%"
         }
         pane size=1 borderless=true {
             plugin location="zellij:status-bar"
-        }
-        floating_panes {
-            pane {
-                height 21
-                width 78
-                x 79
-                y 5
-            }
         }
     }
     new_tab_template {
@@ -179,136 +170,4 @@ layout {
             }
         }
     }
-    swap_floating_layout name="staggered" {
-        floating_panes {
-        }
-    }
-    swap_floating_layout name="enlarged" {
-        floating_panes max_panes=10 {
-            pane cwd="/home/x44ylan/Desktop" {
-                height "90%"
-                width "90%"
-                x "5%"
-                y 1
-            }
-            pane cwd="/home/x44ylan/Desktop" {
-                height "90%"
-                width "90%"
-                x "5%"
-                y 2
-            }
-            pane cwd="/home/x44ylan/Desktop" {
-                height "90%"
-                width "90%"
-                x "5%"
-                y 3
-            }
-            pane cwd="/home/x44ylan/Desktop" {
-                height "90%"
-                width "90%"
-                x "5%"
-                y 4
-            }
-            pane cwd="/home/x44ylan/Desktop" {
-                height "90%"
-                width "90%"
-                x "5%"
-                y 5
-            }
-            pane cwd="/home/x44ylan/Desktop" {
-                height "90%"
-                width "90%"
-                x "5%"
-                y 6
-            }
-            pane cwd="/home/x44ylan/Desktop" {
-                height "90%"
-                width "90%"
-                x "5%"
-                y 7
-            }
-            pane cwd="/home/x44ylan/Desktop" {
-                height "90%"
-                width "90%"
-                x "5%"
-                y 8
-            }
-            pane cwd="/home/x44ylan/Desktop" {
-                height "90%"
-                width "90%"
-                x "5%"
-                y 9
-            }
-            pane cwd="/home/x44ylan/Desktop" {
-                height "90%"
-                width "90%"
-                x 10
-                y 10
-            }
-        }
-    }
-    swap_floating_layout name="spread" {
-        floating_panes max_panes=1 {
-            pane cwd="/home/x44ylan/Desktop" {
-                x "50%"
-                y "50%"
-            }
-        }
-        floating_panes max_panes=2 {
-            pane cwd="/home/x44ylan/Desktop" {
-                width "45%"
-                x "1%"
-                y "25%"
-            }
-            pane cwd="/home/x44ylan/Desktop" {
-                width "45%"
-                x "50%"
-                y "25%"
-            }
-        }
-        floating_panes max_panes=3 {
-            pane cwd="/home/x44ylan/Desktop" {
-                height "45%"
-                width "45%"
-                y "55%"
-            }
-            pane cwd="/home/x44ylan/Desktop" {
-                width "45%"
-                x "1%"
-                y "1%"
-            }
-            pane cwd="/home/x44ylan/Desktop" {
-                width "45%"
-                x "50%"
-                y "1%"
-            }
-        }
-        floating_panes max_panes=4 {
-            pane cwd="/home/x44ylan/Desktop" {
-                height "45%"
-                width "45%"
-                x "1%"
-                y "55%"
-            }
-            pane cwd="/home/x44ylan/Desktop" {
-                height "45%"
-                width "45%"
-                x "50%"
-                y "55%"
-            }
-            pane cwd="/home/x44ylan/Desktop" {
-                height "45%"
-                width "45%"
-                x "1%"
-                y "1%"
-            }
-            pane cwd="/home/x44ylan/Desktop" {
-                height "45%"
-                width "45%"
-                x "50%"
-                y "1%"
-            }
-        }
-    }
 }
-

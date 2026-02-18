@@ -74,8 +74,8 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source <(fzf --zsh)
 # source "$HOME/.sdkman/bin/sdkman-init.sh"
+source <(fzf --zsh)
 
 # Set custom style for paths
 ZSH_HIGHLIGHT_STYLES[path]='fg=white,bold'
@@ -109,18 +109,24 @@ ZSH_HIGHLIGHT_STYLES[path]='fg=white,bold'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+  cd /mnt/c/Users/Dylan/Desktop
+  export VIRTUAL_ENV_DISABLE_PROMPT=1
+  source ~/.venv/bin/activate
+fi
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+export PATH="$HOME/.gem/ruby/3.3.0/bin:$PATH"
+
 # Auto-start Zellij (safe)
 # if [[ -o interactive ]] && command -v zellij >/dev/null; then
 #   if [[ -z "$ZELLIJ" ]]; then
 #     zellij attach -c
 #   fi
 # fi
-
-if [[ "$TERM_PROGRAM" != "vscode" ]]; then
-  cd /mnt/c/Users/Dylan/Desktop
-  source ~/.venv/bin/activate
-fi
-
-export PATH="$HOME/.gem/ruby/3.3.0/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
